@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Align Items</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row; /* Change to column if needed */
+            align-items: center; /* Centers children along the cross axis */
+            justify-content: center; /* Optional: Centers along the main axis too */
+            height: 100vh;
+            border: 2px solid black;
+        }
+        .item {
+            padding: 20px;
+            background-color: lightblue;
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>
