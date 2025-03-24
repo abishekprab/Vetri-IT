@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .column {
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .column-1, .column-3 {
+            flex-grow: 1;
+            background-color: #3498db;
+        }
+        .column-2 {
+            flex-grow: 2;
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column column-1">Column 1</div>
+        <div class="column column-2">Column 2 (Twice the size)</div>
+        <div class="column column-3">Column 3</div>
+    </div>
+</body>
+</html>
