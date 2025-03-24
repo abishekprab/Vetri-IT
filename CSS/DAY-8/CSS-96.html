@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Self Example</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center; /* Center items horizontally */
+            align-items: flex-start; /* Default alignment for other items */
+            height: 300px;
+            border: 2px solid black;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 5px;
+        }
+
+        .center-item {
+            align-self: center; /* Align this specific item to the center */
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item center-item">Center Item</div>
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>
