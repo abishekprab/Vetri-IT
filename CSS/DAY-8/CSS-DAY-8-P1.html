@@ -1,1 +1,103 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            justify-content: center;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 calc(33.333% - 20px);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card h3 {
+            margin: 15px 0;
+        }
+        .card p {
+            flex-grow: 1;
+            color: #555;
+        }
+        .card button {
+            padding: 10px;
+            border: none;
+            background: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .card:nth-child(2) {
+            align-self: flex-start;
+        }
+        .card:nth-child(3) {
+            align-self: flex-end;
+        }
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="" alt="Card Image">
+            <h3>Card Title 1</h3>
+            <p>Some descriptive text for card 1.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="h" alt="Card Image">
+            <h3>Card Title 2</h3>
+            <p>Some descriptive text for card 2.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="" alt="Card Image">
+            <h3>Card Title 3</h3>
+            <p>Some descriptive text for card 3.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+</html>
