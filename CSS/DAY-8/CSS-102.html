@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Shorthand Example</title>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid #333;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .item {
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        /* Using the flex shorthand: flex-grow, flex-shrink, flex-basis */
+        .item1 {
+            flex: 1 1 200px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 200px */
+        }
+
+        .item2 {
+            flex: 2 2 150px; /* flex-grow: 2, flex-shrink: 2, flex-basis: 150px */
+        }
+
+        .item3 {
+            flex: 1 1 100px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 100px */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item item1">Item 1</div>
+        <div class="item item2">Item 2</div>
+        <div class="item item3">Item 3</div>
+    </div>
+
+</body>
+</html>
