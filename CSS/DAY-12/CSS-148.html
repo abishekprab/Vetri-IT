@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fade Out on Click</title>
+    <title>Fade Out Element</title>
     <style>
-        .fade-box {
+        .box {
             width: 200px;
             height: 100px;
-            background-color: lightcoral;
+            background-color: #3498db;
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 18px;
-            color: white;
             cursor: pointer;
             transition: opacity 0.5s ease;
         }
-
-        .fade-box.fade-out {
+        .fade-out {
             opacity: 0;
         }
     </style>
 </head>
 <body>
-    <div class="fade-box">
-        Click to Fade Out
-    </div>
+    <div class="box" onclick="fadeOut(this)">Click to Fade Out</div>
+    
+    <script>
+        function fadeOut(element) {
+            element.classList.add("fade-out");
+        }
+    </script>
 </body>
 </html>
+
