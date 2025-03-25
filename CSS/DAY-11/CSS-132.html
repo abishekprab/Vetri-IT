@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Positioning</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            position: relative;
+        }
+        .relative-box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            position: relative;
+            top: 30px; /* Moves the element 30px down */
+            left: 50px; /* Moves the element 50px to the right */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="relative-box">Offset Box</div>
+    </div>
+</body>
+</html>
