@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepia Button Hover</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+            transition: filter 0.3s ease-in-out;
+        }
+        .btn:hover {
+            filter: sepia(100%);
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Hover Me</button>
+</body>
+</html>
