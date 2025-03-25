@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Positioning</title>
+    <style>
+        .relative-parent {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            border: 2px solid #000;
+            margin: 50px;
+        }
+
+        .absolute-child {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="relative-parent">
+        <div class="absolute-child">Bottom Right</div>
+    </div>
+</body>
+</html>
