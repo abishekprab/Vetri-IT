@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Text with Hover Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .highlight {
+            position: relative;
+            display: inline-block;
+            background-color: yellow;
+            cursor: pointer;
+        }
+        .highlight::after {
+            content: " (More Info: This is additional text that appears on hover.)";
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: max-content;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            font-size: 14px;
+            border-radius: 5px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+        .highlight:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <p>Hover over the <span class="highlight">highlighted text</span> to reveal more info.</p>
+</body>
+</html>
