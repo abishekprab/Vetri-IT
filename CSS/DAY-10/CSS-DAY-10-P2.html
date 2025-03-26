@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 60px 1fr 50px;
+            height: 100vh;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+        }
+        .header {
+            grid-area: header;
+            background: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            background: #222;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px 0;
+            background: #444;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background: #555;
+        }
+        .main-content {
+            grid-area: main;
+            background: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .cards {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            flex: 1;
+            text-align: center;
+            min-width: 200px;
+        }
+        .footer {
+            grid-area: footer;
+            background: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Dashboard</div>
+        <div class="sidebar">
+            <a href="#">Home</a>
+            <a href="#">Reports</a>
+            <a href="#">Settings</a>
+        </div>
+        <div class="main-content">
+            <h2>Main Content</h2>
+            <div class="cards">
+                <div class="card">Card 1</div>
+                <div class="card">Card 2</div>
+                <div class="card">Card 3</div>
+            </div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
