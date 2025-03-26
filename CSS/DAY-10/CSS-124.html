@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Grid Card Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+        .card-header {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .nested-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .nested-item {
+            background: #e0e0e0;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .card-footer {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="card">
+            <div class="card-header">Card Title</div>
+            <div class="nested-grid">
+                <div class="nested-item">Item 1</div>
+                <div class="nested-item">Item 2</div>
+                <div class="nested-item">Item 3</div>
+                <div class="nested-item">Item 4</div>
+            </div>
+            <div class="card-footer">Footer Content</div>
+        </div>
+    </div>
+</body>
+</html>
