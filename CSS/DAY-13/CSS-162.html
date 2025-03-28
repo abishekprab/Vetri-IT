@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Buttons</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .btn {
+            border: none;
+            cursor: pointer;
+            color: white;
+            background-color: #007bff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* Default button size */
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .btn {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Click Me</button>
+</body>
+</html>
