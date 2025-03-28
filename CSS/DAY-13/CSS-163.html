@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Sidebar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        /* Hide sidebar on mobile (max-width: 767px) */
+        @media (max-width: 767px) {
+            .sidebar {
+                display: none;
+            }
+        }
+        /* Show sidebar on tablets and desktops (min-width: 768px) */
+        @media (min-width: 768px) {
+            .sidebar {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        Sidebar Content
+    </div>
+    <div class="content">
+        Main Content Area
+    </div>
+</body>
+</html>
