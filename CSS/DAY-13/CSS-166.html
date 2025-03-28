@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effects for Desktop Only</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .btn, .image {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        /* Apply hover effects only on larger screens */
+        @media (min-width: 768px) {
+            .btn:hover {
+                transform: scale(1.1);
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            }
+            .image:hover {
+                transform: scale(1.05);
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            }
+        }
+        
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .image {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Hover Effects (Desktop Only)</h2>
+    <div class="container">
+        <button class="btn">Hover Me</button>
+        <img src="forest--image.jpg" alt="Sample Image" class="image">
+    </div>
+</body>
+</html>
