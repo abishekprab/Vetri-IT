@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Resizing</title>
+    <style>
+        img {
+            width: 100%; /* Default to full width for mobile */
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (min-width: 768px) {
+            img {
+                width: 50%; /* 50% width on tablets */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            img {
+                width: 25%; /* 25% width on desktops */
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="forest--image.jpg" alt="Responsive Image">
+</body>
+</html>
