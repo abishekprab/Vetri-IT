@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Typography</title>
+    <style>
+        /* Default styles (Small screens) */
+        h1 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 14px;
+        }
+
+        /* Medium screens (min-width: 768px) */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+
+        /* Large screens (min-width: 1024px) */
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Heading</h1>
+    <p>This is a paragraph that adjusts its font size based on the screen width.</p>
+</body>
+</html>
