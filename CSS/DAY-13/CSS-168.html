@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Media Query</title>
+    <style>
+        body {
+            background-color: lightblue;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                background: none !important;
+                color: black !important;
+            }
+            .content {
+                background: white !important;
+                color: black !important;
+                border: none !important;
+            }
+            img, .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Print Media Query Example</h1>
+        <p>This content will be printed in black and white, without background colors or images.</p>
+        <img src="forest--image.jpg" alt="Example Image">
+        <p class="no-print">This paragraph will not be printed.</p>
+    </div>
+</body>
+</html>
