@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        /* Default background for desktop */
+        body {
+            background-color: lightcoral;
+        }
+
+        /* Tablet */
+        @media (max-width: 1024px) {
+            body {
+                background-color: lightgreen;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    Resize the window to see the background color change!
+</body>
+</html>
