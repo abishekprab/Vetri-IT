@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            height: 200vh;
+            background: linear-gradient(120deg, #1e3c72, #2a5298);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: background 1s ease-in-out;
+        }
+
+        /* Background Transition on Scroll */
+        body.scrolled {
+            background: linear-gradient(120deg, #ff7e5f, #feb47b);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeInUp 2s ease-out forwards;
+        }
+
+        /* Button Styling */
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #ff7e5f;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(255, 126, 95, 0.6);
+        }
+
+        .cta-button:hover {
+            box-shadow: 0 0 20px rgba(255, 126, 95, 1);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Welcome to Our Product</h1>
+        <p>Experience innovation with a stunning landing page.</p>
+        <a href="#" class="cta-button">Get Started</a>
+    </div>
+
+    
+
+</body>
+</html>
