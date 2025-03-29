@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .gallery {
+            display: flex;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .gallery img:hover {
+            filter: grayscale(100%);
+        }
+        .main-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .price {
+            font-size: 24px;
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        .offer {
+            font-size: 18px;
+            color: #388e3c;
+            font-weight: bold;
+        }
+        .add-to-cart {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #ff9800;
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        .add-to-cart:hover {
+            background: #e68900;
+            transform: scale(1.05);
+        }
+        .product-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .product-details div {
+            background: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="navy-t-shirt.png" alt="Main Product Image" class="main-image">
+    
+    <div class="gallery">
+        <img src="navy-t-shirt.png" alt="Thumbnail 1">
+        <img src="navy-t-shirt.png" alt="Thumbnail 2">
+        <img src="navy-t-shirt.png" alt="Thumbnail 3">
+    </div>
+
+    <h2>Product Name</h2>
+    <p class="price">	₹449 <span class="offer">20% OFF</span></p>
+
+    <button class="add-to-cart">Add to Cart</button>
+
+    <div class="product-details">
+        <div><strong>Brand:</strong> XYZ</div>
+        <div><strong>Material:</strong> Cotton</div>
+        <div><strong>Size:</strong> M, L, XL</div>
+        <div><strong>Color:</strong> Black</div>
+    </div>
+</div>
+
+</body>
+</html>
