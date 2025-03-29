@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: purple;
+        }
+        .hero {
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .courses {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .faq {
+            max-width: 600px;
+            margin: auto;
+            padding: 40px;
+        }
+        .faq-item {
+            margin-bottom: 10px;
+        }
+        .faq-item input {
+            display: none;
+        }
+        .faq-item label {
+            display: block;
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .faq-item .content {
+            display: none;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            margin-top: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .faq-item input:checked + label + .content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>Learn from the Best</h1>
+        <p>Join our online courses and expand your knowledge.</p>
+    </section>
+    <section class="courses">
+        <div class="card">
+            <h2>Web Development</h2>
+            <p>Learn to build modern websites from scratch.</p>
+        </div>
+        <div class="card">
+            <h2>Data Science</h2>
+            <p>Analyze data and build machine learning models.</p>
+        </div>
+        <div class="card">
+            <h2>Graphic Design</h2>
+            <p>Create stunning visuals and user interfaces.</p>
+        </div>
+    </section>
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <input type="checkbox" id="faq1">
+            <label for="faq1">What is the duration of the courses?</label>
+            <div class="content">Courses vary in duration, ranging from 4 to 12 weeks.</div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="faq2">
+            <label for="faq2">Do I get a certificate?</label>
+            <div class="content">Yes, you will receive a certificate upon successful completion.</div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="faq3">
+            <label for="faq3">Are there any prerequisites?</label>
+            <div class="content">Most courses have no prerequisites, but some advanced courses may require prior knowledge.</div>
+        </div>
+    </section>
+</body>
+</html>
