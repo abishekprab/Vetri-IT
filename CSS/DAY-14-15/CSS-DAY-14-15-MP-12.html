@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .portfolio {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "item1 item2 item3"
+                "item4 item5 item3";
+            gap: 10px;
+        }
+
+        .grid-item {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+
+        .grid-item .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .grid-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .item1 { grid-area: item1; background-image: url('sunset.png'); }
+        .item2 { grid-area: item2; background-image: url('sunset.png'); }
+        .item3 { grid-area: item3; background-image: url('sunset.png'); }
+        .item4 { grid-area: item4; background-image: url('sunset.png'); }
+        .item5 { grid-area: item5; background-image: url('sunset.png'); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-areas:
+                    "item1 item2"
+                    "item3 item3"
+                    "item4 item5";
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-areas:
+                    "item1"
+                    "item2"
+                    "item3"
+                    "item4"
+                    "item5";
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="portfolio">
+        <div class="grid-container">
+            <div class="grid-item item1">
+                <div class="overlay">Project 1</div>
+            </div>
+            <div class="grid-item item2">
+                <div class="overlay">Project 2</div>
+            </div>
+            <div class="grid-item item3">
+                <div class="overlay">Project 3</div>
+            </div>
+            <div class="grid-item item4">
+                <div class="overlay">Project 4</div>
+            </div>
+            <div class="grid-item item5">
+                <div class="overlay">Project 5</div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
