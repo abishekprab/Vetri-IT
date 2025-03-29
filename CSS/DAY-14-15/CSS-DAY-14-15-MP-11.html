@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        .menu-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #b22222;
+        }
+        .category {
+            margin-top: 20px;
+        }
+        h2 {
+            border-bottom: 2px solid #b22222;
+            display: inline-block;
+            padding-bottom: 5px;
+            color: #b22222;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .price {
+            font-weight: bold;
+            color: #b22222;
+        }
+        .price:hover {
+            background-color: #b22222;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+        @media (max-width: 600px) {
+            .menu-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .price {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Restaurant Menu</h1>
+        
+        <div class="category">
+            <h2>Starters</h2>
+            <div class="menu-item">
+                <span>Garlic Bread</span>
+                <span class="price">₹100</span>
+            </div>
+            <div class="menu-item">
+                <span>Bruschetta</span>
+                <span class="price">₹180</span>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Main Course</h2>
+            <div class="menu-item">
+                <span>Grilled Chicken</span>
+                <span class="price">₹399</span>
+            </div>
+            <div class="menu-item">
+                <span>Pasta Alfredo</span>
+                <span class="price">₹250</span>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Desserts</h2>
+            <div class="menu-item">
+                <span>Chocolate Cake</span>
+                <span class="price">₹350</span>
+            </div>
+            <div class="menu-item">
+                <span>Ice Cream</span>
+                <span class="price">₹80</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
